@@ -24,9 +24,11 @@ let App = React.createClass({
           attempt to autocomplete the first one.
         </p>
 
+        <label htmlFor="async-autocomplete">
+          Choose a US state
+        </label>
         <Autocomplete
-          labelText="Choose a state from the US"
-          inputProps={{name: "US state"}}
+          inputProps={{ id: 'async-autocomplete' }}
           ref="autocomplete"
           value={this.state.value}
           items={this.state.unitedStates}

@@ -16,10 +16,12 @@ let App = React.createClass({
           so <code>Autocomplete</code> has methods baked in to help.
         </p>
 
+        <label htmlFor="static-autocomplete">
+          Choose a US state
+        </label>
         <Autocomplete
           value={this.state.value}
-          labelText="Choose a state from the US"
-          inputProps={{name: "US state"}}
+          inputProps={{ id: 'static-autocomplete' }}
           items={getStates()}
           getItemValue={(item) => item.name}
           shouldItemRender={matchStateToTerm}

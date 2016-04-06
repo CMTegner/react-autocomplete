@@ -21,10 +21,12 @@ let App = React.createClass({
           look as well as the rendering of it. In this case we put headers for each
           letter of the alphabet.
         </p>
+        <label htmlFor="custom-autocomplete">
+          Choose a US state
+        </label>
         <Autocomplete
           value={this.state.value}
-          labelText="Choose a state from the US"
-          inputProps={{name: "US state"}}
+          inputProps={{ id: 'custom-autocomplete' }}
           items={this.state.unitedStates}
           getItemValue={(item) => item.name}
           onSelect={value => this.setState({ value, unitedStates: [] }) }
